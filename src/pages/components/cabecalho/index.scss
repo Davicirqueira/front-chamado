@@ -1,0 +1,52 @@
+header {
+
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #2B2B2B;
+    gap: 890px;
+
+    .esq {
+
+        display: flex;
+        flex-direction: row;
+        gap: 45px;
+        align-items: center;
+        padding-left: 60px;
+
+    }
+
+    .dir {
+
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+        align-items: center;
+
+    }
+
+    .logo {
+
+        width: 50px;
+        padding: 10px 0;
+
+    }
+
+    .title {
+
+        color: #F5F6FA;
+        padding: 10px 0;
+
+    }
+
+    a {
+
+        color: #F5F6FA;
+        text-decoration: none;
+        padding: 10px 0;
+        
+    }
+
+    
+
+}
