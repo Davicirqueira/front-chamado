@@ -82,6 +82,18 @@
           background-color: #7a7a7a;
         }
       }
+
+      .link{
+
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        padding-top: 3%;
+
+        .cad{
+          color: #c41e1e;
+        }
+      }
     }
   }
   

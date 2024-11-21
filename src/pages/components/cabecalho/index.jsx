@@ -2,6 +2,8 @@ import './index.scss';
 
 export default function Cabecalho() {
 
+  const nome = localStorage.getItem('USERNAME')
+
   return (
 
     <header>
@@ -10,7 +12,7 @@ export default function Cabecalho() {
 
         <img className='logo' src="/assets/images/logo.png" alt="" />
 
-        <h2 className='title'>Bem vindo,</h2>
+        <h2 className='title'>Bem vindo, {nome}</h2>
 
       </div>
 
