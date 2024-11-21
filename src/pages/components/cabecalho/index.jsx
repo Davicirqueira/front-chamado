@@ -18,7 +18,7 @@ export default function Cabecalho() {
 
       <div className='dir'>
 
-        <a href="/login">Sair</a>
+        <a href="/">Sair</a>
 
       </div>
 
