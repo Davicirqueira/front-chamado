@@ -1,5 +1,106 @@
 .pagina-chamado {
 
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e4e4e4;
+
+    .img-fundo{
+
+        img{
+            width: 100%;
+        }
+        
+    }
+
+    .form{
+
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        padding: 20px;
+        border-radius: 15px;
+        gap: 10px;
+
+        background-color: #fff;
+        box-shadow:  5px 5px 10px rgba(0, 0, 0, 0.2);
+
+        h3{
+            color: #c41e1e;
+        }
+
+        label{
+            font: 400 18px "Poppins";
+        }
+
+        .title{
+            display: flex;
+            flex-direction: column;
+            width: 925px;
+
+            input{
+                padding: 5px;
+            }
+        }
+
+        .info{
+            display: flex;
+            flex-direction: column;
+            width: 925px;
+
+            .infos{
+                height: 120px;
+            }
+        }
+
+        .triple{
+            display: flex;
+            gap: 15px;
+
+            .impact{
+                display: flex;
+                flex-direction: column;
+                width: 298px;
+
+                select{
+                    padding: 6px;
+                    text-align: end;
+                }
+            }
+
+            .dates{
+                display: flex;
+                flex-direction: column;
+                width: 298px;
+
+                input{
+                    padding: 5px;
+                }
+            }
+
+            .atribute{
+                display: flex;
+                flex-direction: column;
+                width: 298px;
+
+                input{
+                    padding: 5px;
+                }
+            }
+
+        }
+
+        .buttons{
+
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            padding-left: 78%;
+
+        }
+
+    }
 
 }
