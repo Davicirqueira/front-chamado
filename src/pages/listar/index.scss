@@ -1,5 +1,70 @@
 .pagina-home {
 
-    
+    min-height: 100vh;
+    background-color: #e4e4e4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    .input{
+        margin-top: 8%;
+
+        >input{
+            padding: 6px;
+            width: 300px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border: 1px solid #7a7878
+        }
+    }
+
+    table{
+
+        background-color: #fff;
+        overflow-x: auto;
+        width: 1200px;
+        // border-collapse: collapse;
+        
+        tr{
+            color: #fff;
+            background-color: #2B2B2B;
+
+            th{
+                padding: 8px;
+                text-align: start;
+            }
+
+            .title-list{
+                min-width: 250px;
+            }
+
+            .a{
+                width: 160px;
+            }
+
+            .atributed-actions{
+                min-width: 250px;
+            }
+            
+        }
+
+        tbody{
+
+            padding: 10px;
+            
+            td, .center{
+                border-bottom: 1px solid #ccc;
+                padding: 10px;
+                font: 500 17px "Poppins";
+            }
+
+            .center{
+                text-align: center;
+            }
+            
+        }
+
+    }
 
 }
