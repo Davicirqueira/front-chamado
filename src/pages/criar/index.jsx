@@ -1,7 +1,16 @@
 import './index.scss';
 import Cabecalho from '../components/cabecalho';
+import { useNavigate } from 'react-router-dom';
 
 export default function Chamado() {
+
+    const navigate = useNavigate();
+
+    function Voltar(){
+
+        navigate('/home');
+
+    }
 
     return (
 
@@ -22,7 +31,7 @@ export default function Chamado() {
 
                 <div className='title'>
                     <label htmlFor="">Título</label>
-                    <input type="text" />
+                    <input type="text" placeholder='Nome do Problema...'/>
                 </div>
 
                 <div className='info'>
@@ -48,16 +57,16 @@ export default function Chamado() {
 
                     <div className='atribute'>
                         <label htmlFor="">Atribuir</label>
-                        <input type="text" />
+                        <input type="text" placeholder='Responsável...'/>
                     </div>
 
                 </div>
 
                 <div className='buttons'>
 
-                    <button>Voltar</button>
+                    <button className='back' onClick={Voltar}>Voltar</button>
 
-                    <button>Salvar</button>
+                    <button className='save'>Salvar</button>
 
                 </div>
 

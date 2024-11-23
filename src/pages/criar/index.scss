@@ -6,15 +6,16 @@
     min-height: 100vh;
     background-color: #e4e4e4;
 
-    .img-fundo{
+    .img-fundo {
 
-        img{
+        width: 100%;
+        img {
             width: 100%;
         }
-        
+
     }
 
-    .form{
+    .form {
 
         display: flex;
         flex-direction: column;
@@ -23,81 +24,127 @@
         padding: 20px;
         border-radius: 15px;
         gap: 10px;
-
+        position: fixed;
+        margin-top: 200px;
         background-color: #fff;
-        box-shadow:  5px 5px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 
-        h3{
-            color: #c41e1e;
+        h3 {
+            color: #DB2B39;
         }
 
-        label{
+        label {
             font: 400 18px "Poppins";
         }
 
-        .title{
+        .title {
             display: flex;
             flex-direction: column;
             width: 925px;
 
-            input{
+            input {
                 padding: 5px;
             }
         }
 
-        .info{
+        .info {
             display: flex;
             flex-direction: column;
             width: 925px;
 
-            .infos{
+            .infos {
                 height: 120px;
             }
         }
 
-        .triple{
+        .triple {
             display: flex;
             gap: 15px;
 
-            .impact{
+            .impact {
                 display: flex;
                 flex-direction: column;
                 width: 298px;
 
-                select{
+                select {
                     padding: 6px;
                     text-align: end;
                 }
             }
 
-            .dates{
+            .dates {
                 display: flex;
                 flex-direction: column;
                 width: 298px;
 
-                input{
+                input {
                     padding: 5px;
                 }
             }
 
-            .atribute{
+            .atribute {
                 display: flex;
                 flex-direction: column;
                 width: 298px;
 
-                input{
+                input {
                     padding: 5px;
                 }
             }
 
         }
 
-        .buttons{
+        .buttons {
 
             display: flex;
             flex-direction: row;
             gap: 5px;
-            padding-left: 78%;
+            padding-left: 56%;
+            margin-top: 5%;
+
+            .back {
+
+                background-color: #fff;
+                border: 2px solid #DB2B39;
+                color: #DB2B39;
+                padding: 3px;
+                font: 600 15px "Poppins";
+                border-radius: 6px;
+                width: 200px;
+
+            }
+
+            .back:hover {
+
+                background-color: #da5661;
+                border: 2px solid #da5661;
+                color: #fff;
+                transform: scale(1.02);
+                transition: 0.5s ease;
+
+            }
+
+            .save {
+
+                border: 2px solid #DB2B39;
+                background-color: #DB2B39;
+                color: #fff;
+                font: 600 15px "Poppins";
+                border-radius: 6px;
+                padding: 3px;
+                width: 200px;
+
+            }
+
+            .save:hover{
+
+                background-color: #da5661;
+                border: 2px solid #da5661;
+                color: #fff;
+                transform: scale(1.02);
+                transition: 0.5s ease;
+
+            }
 
         }
 

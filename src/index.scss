@@ -8,3 +8,21 @@
   box-sizing: border-box;
 
 }
+
+input{
+  outline: 0;
+}
+
+textarea{
+  outline: 0;
+  padding: 10px;
+  resize: none;
+}
+
+select{
+  outline: 0;
+}
+
+a{
+  text-decoration: none;
+}
