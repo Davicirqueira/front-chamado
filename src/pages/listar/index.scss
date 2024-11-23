@@ -5,64 +5,97 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 
-    .input{
+    .input {
         margin-top: 8%;
+        display: inline-block;
+        padding-left: 57%;
 
-        >input{
+        input {
             padding: 6px;
             width: 300px;
             border-top-left-radius: 10px;
             border-bottom-left-radius: 10px;
-            border: 1px solid #7a7878
+            border: 1px solid #7a7878;
+            display: inline-block;
+        }
+
+        button {
+            padding: 6px;
+            display: inline-block;
+            background-color: #fff;
+            border: 1px solid #7a7878;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        button:hover{
+
+            transform: scale(1.02);
+            transition: 0.5s ease;
+            background-color: #b9b9b9;
         }
     }
 
-    table{
+    table {
 
         background-color: #fff;
         overflow-x: auto;
         width: 1200px;
         // border-collapse: collapse;
-        
-        tr{
+
+        tr {
             color: #fff;
             background-color: #2B2B2B;
 
-            th{
+            th {
                 padding: 8px;
                 text-align: start;
             }
 
-            .title-list{
+            .title-list {
                 min-width: 250px;
             }
 
-            .a{
+            .a {
                 width: 160px;
             }
 
-            .atributed-actions{
+            .atributed-actions {
                 min-width: 250px;
             }
-            
+
         }
 
-        tbody{
+        tbody {
 
             padding: 10px;
-            
-            td, .center{
+
+            td,
+            .center {
                 border-bottom: 1px solid #ccc;
                 padding: 10px;
                 font: 500 17px "Poppins";
             }
 
-            .center{
+            .center {
                 text-align: center;
             }
-            
+
+            .atributed-row {
+                display: flex;
+                flex-direction: row;
+
+                div {
+                    display: flex;
+                    flex-direction: row;
+                    margin-left: 72%;
+                    gap: 20px;
+                }
+
+            }
+
         }
 
     }

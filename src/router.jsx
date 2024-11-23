@@ -15,6 +15,7 @@ export default function Navegacao() {
                 <Route path='/' element={<Login />} />
                 <Route path='/home' element={<Home />} />
                 <Route path='/chamado' element={<Chamado />} />
+                <Route path='/chamado/:id' element={<Chamado />} />
 
             </Routes>
 

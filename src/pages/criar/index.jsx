@@ -1,15 +1,51 @@
 import './index.scss';
 import Cabecalho from '../components/cabecalho';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import { useState } from 'react';
+import moment from 'moment';
 
 export default function Chamado() {
 
+    const[token, setToken] = useState(null);
     const navigate = useNavigate();
 
     function Voltar(){
 
         navigate('/home');
 
+    }
+
+    const [titulo, setTitulo] = useState('');
+    const[infos, setInfos] = useState('');
+    const[impacto, setImpacto] = useState('');
+    const[dataOcorrencia, setDataOcorrencia] = useState('');
+    const[atribuir, setAtribuir] = useState('');
+
+    function baixo(){
+        setImpacto('Baixo');
+    }
+    function medio(){
+        setImpacto('Médio');
+    }
+    function alto(){
+        setImpacto('Alto');
+    }
+
+
+    const { id } = useParams();
+
+    async function salvarChamado(){
+
+        const chamado = {
+
+            "titulo": titulo,
+            "infos": infos,
+            "impacto": impacto,
+            "dataOcorrencia": dataOcorrencia,
+            "atribuir": atribuir
+
+        }
+        
     }
 
     return (
@@ -44,9 +80,9 @@ export default function Chamado() {
                     <div className='impact'>
                         <label htmlFor="">Impacto</label>
                         <select name="" id="">
-                            <option value="">Baixo</option>
-                            <option value="">Médio</option>
-                            <option value="">Alto</option>
+                            <option onClick={baixo} value="">Baixo</option>
+                            <option onClick={medio} value="">Médio</option>
+                            <option onClick={alto} value="">Alto</option>
                         </select>
                     </div>
 

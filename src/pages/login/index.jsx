@@ -12,7 +12,6 @@ export default function Login() {
     
     async function entrar(){
 
-
         const user = {
 
             "nome": nome,
@@ -23,9 +22,9 @@ export default function Login() {
         const url = 'http://localhost:9595/entrar';
         let resp = await axios.post(url, user);
 
-        if(resp.data.error != undefined){
+        if(resp.data.erro != undefined){
 
-            alert(resp.data.error);
+            alert(resp.data.erro);
 
         }
         else{
@@ -36,6 +35,7 @@ export default function Login() {
 
         }
     }
+
 
 
     return (

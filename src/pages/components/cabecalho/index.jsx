@@ -1,8 +1,19 @@
 import './index.scss';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function Cabecalho() {
 
   const nome = localStorage.getItem('USERNAME')
+
+  const navigate = useNavigate();
+
+  function sair(){
+
+    localStorage.removeItem('USER');
+    navigate('/');
+
+  }
 
   return (
 
@@ -18,7 +29,7 @@ export default function Cabecalho() {
 
       <div className='dir'>
 
-        <a href="/">Sair</a>
+        <a onClick={sair}>Sair</a>
 
       </div>
 
