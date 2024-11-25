@@ -17,7 +17,7 @@ export default function Chamado() {
     }
 
     const [titulo, setTitulo] = useState('');
-    const [infos, setInfos] = useState('');
+    const [informacoes, setInformacoes] = useState('');
     const [impacto, setImpacto] = useState('');
     const [dataOcorrencia, setDataOcorrencia] = useState('');
     const [atribuir, setAtribuir] = useState('');
@@ -29,7 +29,7 @@ export default function Chamado() {
         const chamado = {
 
             "titulo": titulo,
-            "infos": infos,
+            "informacoes": informacoes,
             "impacto": impacto,
             "dataOcorrencia": dataOcorrencia,
             "atribuir": atribuir
@@ -68,7 +68,7 @@ export default function Chamado() {
             let ocorrencia = moment(dados.dataOcorrencia).format('YYYY-MM-DD');
 
             setTitulo(dados.titulo);
-            setInfos(dados.informacoes);
+            setInformacoes(dados.informacoes);
             setImpacto(dados.impacto);
             setDataOcorrencia(ocorrencia);
             setAtribuir(dados.atribuir)
@@ -118,8 +118,8 @@ export default function Chamado() {
                 <div className='info'>
                     <label htmlFor="">Informações</label>
                     <textarea className='infos'
-                        value={infos}
-                        onChange={e => setInfos(e.target.value)}
+                        value={informacoes}
+                        onChange={e => setInformacoes(e.target.value)}
                         name=""
                         id=""
                         placeholder=' Descreva as Informações...'>

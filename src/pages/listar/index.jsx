@@ -12,6 +12,7 @@ export default function Home() {
 
     const [token, setToken] = useState(null);
     const [listaChamados, setListaChamados] = useState([]);
+    const [impacto, setImpacto] = useState('');
 
     const navigate = useNavigate();
 
@@ -30,6 +31,14 @@ export default function Home() {
 
     }
 
+    async function buscarPorImpacto(){
+
+        const url = `http://localhost:9595/chamados/busca/${impacto}`;
+        let resp = await axios.get(url);
+
+        setListaChamados(resp.data)
+    }
+
     async function excluir(id){
 
         const url = `http://localhost:9595/chamados/${id}`;
@@ -41,14 +50,17 @@ export default function Home() {
 
     useEffect(() => {
 
+        
         let token = localStorage.getItem('USER');
         setToken(token);
-
+        
         if(token == null){
             navigate('/')
         }
 
-        buscarChamados();
+        if(impacto == ''){
+            buscarChamados();
+        }
 
     }, [])
 
@@ -59,8 +71,8 @@ export default function Home() {
             <Cabecalho />
 
             <div className='input'>
-                <input type="text" placeholder='Filtrar...' />
-                <button><FontAwesomeIcon icon={faMagnifyingGlass} color='#DB2B39' /></button>
+                <input type="text" placeholder='Filtrar...' value={impacto} onChange={e => setImpacto(e.target.value)}/>
+                <button onClick={buscarPorImpacto}><FontAwesomeIcon icon={faMagnifyingGlass} color='#DB2B39' /></button>
             </div>
 
             <table>
